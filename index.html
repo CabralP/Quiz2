@@ -4,14 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quiz App</title>
+  <!-- Verbind CSS bestand -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- STARTPAGINA -->
+  <!-- ===============================
+       STARTPAGINA
+       =============================== -->
   <div class="container active" id="start-page">
     <h1>Welkom</h1>
     <p>Geef hier je uitleg over de quiz</p>
+    <!-- Formulier om naam in te voeren -->
     <form id="start-form">
       <label for="name">Wat is je naam?</label>
       <input type="text" id="name" name="name" placeholder="Vul je naam in" required>
@@ -19,15 +23,19 @@
     </form>
   </div>
 
-  <!-- THEMASCHERM -->
+  <!-- ===============================
+       THEMASCHERM
+       =============================== -->
   <section class="container" id="theme-page">
     <div class="intro">
+      <!-- Teamnaam en spelernaam worden dynamisch ingevuld via JS -->
       <h2 class="teamnaam">[Teamnaam]</h2>
       <h1>
         Hallo <em id="speler-naam">[naam speler]</em>,<br>
         welke quiz wil je spelen?
       </h1>
     </div>
+    <!-- Thema selectie knoppen -->
     <section class="themas">
       <div class="thema" data-theme="1"><a href="#">Thema 1</a></div>
       <div class="thema" data-theme="2"><a href="#">Thema 2</a></div>
@@ -35,33 +43,48 @@
     </section>
   </section>
 
-  <!-- QUIZPAGINA -->
+  <!-- ===============================
+       QUIZPAGINA
+       =============================== -->
   <div class="quiz-container container" id="quiz-page">
+    <!-- Hier wordt de vraagtekst gezet via JS -->
     <h2 id="vraag-tekst">Vraag</h2>
+    <!-- Plaats voor afbeelding bij de vraag -->
     <div class="image-placeholder">
       <p id="vraag-afbeelding">[ Afbeelding ]</p>
     </div>
+    <!-- Teamnaam bovenaan quiz -->
     <div class="teamname" id="quiz-teamnaam">[Teamnaam]</div>
+    <!-- Knoppen voor antwoordopties -->
     <div class="answers" id="answers"></div>
+    <!-- Timer voor de vraag -->
     <div class="timer" id="timer">Timer</div>
+    <!-- Feedback voor gekozen antwoord (wordt later gebruikt als gewenst) -->
     <div class="feedback" id="feedback"></div>
-    <button id="next-btn" style="display:none;">Volgende vraag</button>
   </div>
 
-  <!-- RESULTATENPAGINA -->
+  <!-- ===============================
+       RESULTATENPAGINA
+       =============================== -->
   <div class="container" id="result-page">
     <h1>Resultaten</h1>
+    <!-- Hier worden alle gegeven antwoorden en correcte antwoorden getoond -->
     <div id="result-details"></div>
     <button id="to-scoreboard-btn">Bekijk Scoreboard</button>
   </div>
 
-  <!-- SCOREBOARD -->
+  <!-- ===============================
+       SCOREBOARD
+       =============================== -->
   <div class="container" id="score-page">
     <h1>Scoreboard</h1>
+    <!-- Hier wordt de top 3 van scores getoond -->
     <div id="scoreboard"></div>
+    <!-- Knop om opnieuw te beginnen -->
     <button id="restart-btn">Speel opnieuw</button>
   </div>
 
+  <!-- Verbind JS bestand -->
   <script src="js/script.js"></script>
 </body>
 </html>

@@ -1,90 +1,114 @@
+/* ===========================
+   ALGEMENE BODY STIJL
+   =========================== */
 body {
-  font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #74ABE2, #5563DE);
-  margin: 0;
+  font-family: Arial, sans-serif; /* Lettertype voor hele pagina */
+  background: linear-gradient(135deg, #74ABE2, #5563DE); /* Mooie gradient achtergrond */
+  margin: 0; 
   padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  color: #fff;
-  text-align: center;
+  display: flex; 
+  justify-content: center; /* Horizontaal centreren van container */
+  align-items: center;     /* Verticaal centreren van container */
+  min-height: 100vh;       /* Minimaal 100% van schermhoogte */
+  color: #fff;             /* Standaard tekstkleur wit */
+  text-align: center;      /* Tekst gecentreerd */
 }
 
+/* ===========================
+   CONTAINER STIJL
+   =========================== */
 .container {
-  max-width: 600px;
-  width: 90%;
-  background: #fff;
-  color: #333;
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  display: none;
+  max-width: 600px;        /* Maximale breedte */
+  width: 90%;              /* Breedte in % van scherm */
+  background: #fff;        /* Witte achtergrond */
+  color: #333;             /* Tekstkleur donkergrijs */
+  padding: 2rem;           /* Binnenmarge */
+  border-radius: 12px;     /* Afgeronde hoeken */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* Schaduw voor diepte */
+  display: none;           /* Standaard verborgen */
 }
 
+/* Toon container wanneer actief */
 .container.active {
   display: block;
 }
 
+/* ===========================
+   INPUT VELDEN
+   =========================== */
 input {
-  width: 100%;
-  padding: 0.5rem;
-  margin: 1rem 0;
-  border: 1px solid #ccc;
-  border-radius: 8px;
+  width: 100%;             /* Volledige breedte */
+  padding: 0.5rem;         /* Binnenmarge */
+  margin: 1rem 0;          /* Buitenmarge */
+  border: 1px solid #ccc;  /* Lichte rand */
+  border-radius: 8px;      /* Afgeronde hoeken */
 }
 
+/* ===========================
+   KNOPPEN STIJL
+   =========================== */
 button {
-  background: #5563DE;
-  color: white;
-  border: none;
-  padding: 0.75rem 1.5rem;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-  margin-top: 0.5rem;
+  background: #5563DE;     /* Blauwe achtergrond */
+  color: white;            /* Witte tekst */
+  border: none;            /* Geen rand */
+  padding: 0.75rem 1.5rem; /* Binnenmarge */
+  border-radius: 8px;      /* Afgeronde hoeken */
+  cursor: pointer;         /* Verander cursor bij hover */
+  transition: background 0.3s ease; /* Zachte hover animatie */
+  margin-top: 0.5rem;      /* Bovenmarge */
 }
 
+/* Hover effect voor knoppen */
 button:hover {
   background: #3f4cb8;
 }
 
+/* ===========================
+   INTRO TEKST
+   =========================== */
 .intro h1 em {
-  color: #FFD700;
-  font-style: normal;
-  font-weight: bold;
+  color: #FFD700;          /* Gouden kleur voor nadruk */
+  font-style: normal;      /* Normale stijl (geen italic) */
+  font-weight: bold;       /* Vetgedrukt */
 }
 
+/* ===========================
+   THEMA SELECTIE
+   =========================== */
 .themas {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: flex;           /* Flexbox voor thema blokken */
+  gap: 1rem;               /* Ruimte tussen blokken */
+  flex-wrap: wrap;         /* Zorgt dat blokken op volgende regel komen */
+  justify-content: center; /* Centreren van de blokken */
   margin-top: 1rem;
 }
 
 .thema {
-  background: #fff;
+  background: #fff;  
   color: #333;
   padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
   min-width: 120px;
-  transition: transform 0.3s ease, background 0.3s ease;
+  transition: transform 0.3s ease, background 0.3s ease; /* Hover animatie */
 }
 
+/* Hover effect thema blok */
 .thema:hover {
   transform: translateY(-5px);
   background: #f0f0f0;
 }
 
 .thema a {
-  text-decoration: none;
+  text-decoration: none;   /* Geen onderstreping */
   color: #333;
   font-weight: bold;
   font-size: 1.2rem;
 }
 
+/* ===========================
+   QUIZ CONTAINER
+   =========================== */
 .quiz-container .image-placeholder {
   background: #f0f0f0;
   height: 150px;
@@ -101,6 +125,7 @@ button:hover {
   font-size: 1.2rem;
 }
 
+/* Antwoordknoppen quiz */
 .answers button {
   display: block;
   width: 100%;
@@ -109,6 +134,9 @@ button:hover {
   border-radius: 8px;
 }
 
+/* ===========================
+   TIMER
+   =========================== */
 .timer {
   text-align: center;
   font-weight: bold;
@@ -116,6 +144,9 @@ button:hover {
   font-size: 1.2rem;
 }
 
+/* ===========================
+   FEEDBACK (goed/fout)
+   =========================== */
 .feedback {
   margin-top: 1rem;
   font-weight: bold;
@@ -129,11 +160,17 @@ button:hover {
   color: red;
 }
 
+/* ===========================
+   RESULTATEN
+   =========================== */
 #result-details {
   text-align: left;
   margin: 1rem 0;
 }
 
+/* ===========================
+   SCOREBOARD
+   =========================== */
 #scoreboard {
   margin: 1rem 0;
 }
