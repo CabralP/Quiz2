@@ -22,27 +22,20 @@ const restartBtn = document.getElementById("restart-btn");
 let countdown;
 const timePerQuestion = 15;
 
-// QUIZ DATA
-const quizData = {
-  1: [
-    {vraag:"Wat is 2+2?", antwoorden:["4","3","5","6"], correct:"4"},
-    {vraag:"Welke kleur heeft de lucht?", antwoorden:["Blauw","Groen","Rood","Geel"], correct:"Blauw"}
-  ],
-  2: [
-    {vraag:"Wat is de hoofdstad van Frankrijk?", antwoorden:["Parijs","Rome","Berlijn","Madrid"], correct:"Parijs"},
-    {vraag:"Wat is 10-3?", antwoorden:["7","8","6","5"], correct:"7"}
-  ],
-  3: [
-    {vraag:"Welke planeet staat bekend als rode planeet?", antwoorden:["Mars","Venus","Aarde","Jupiter"], correct:"Mars"},
-    {vraag:"Hoeveel ogen heeft een spin?", antwoorden:["8","6","4","2"], correct:"8"}
-  ]
-};
-
+let quizData = {}; // komt uit JSON
 let currentTheme;
 let currentQuestions = [];
 let currentIndex = 0;
 let score = 0;
 let answersHistory = [];
+
+// JSON LADEN
+fetch("questions.json")
+  .then(response => response.json())
+  .then(data => {
+    quizData = data; // quizData gevuld
+  })
+  .catch(error => console.error("Fout bij laden van questions.json:", error));
 
 // HELPERS
 function shuffle(array){ return array.sort(()=> Math.random()-0.5); }
@@ -62,11 +55,7 @@ form.addEventListener("submit", e=>{
 document.querySelectorAll(".thema").forEach(block=>{
   block.addEventListener("click", ()=>{
     currentTheme = block.dataset.theme;
-    let questions = [...quizData[currentTheme]];
-    while(questions.length < 10){
-      questions = questions.concat([...quizData[currentTheme]]);
-    }
-    currentQuestions = shuffle(questions).slice(0,10);
+    currentQuestions = shuffle([...quizData[currentTheme]]).slice(0,10);
     currentIndex = 0;
     score = 0;
     answersHistory = [];
@@ -80,7 +69,7 @@ document.querySelectorAll(".thema").forEach(block=>{
 function showQuestion(){
   const q = currentQuestions[currentIndex];
   vraagTekst.textContent = q.vraag;
-  answersContainer.innerHTML="";
+  answersContainer.innerHTML = "";
   shuffle([...q.antwoorden]).forEach(ans=>{
     const btn = document.createElement("button");
     btn.textContent = ans;
@@ -141,33 +130,26 @@ function showResults(){
   });
 }
 
-// RESULTATEN -> SCOREBOARD
+// SCOREBOARD
 toScoreboardBtn.addEventListener("click", ()=>{
   resultPage.classList.remove("active");
   scorePage.classList.add("active");
 
-  // Oude scores ophalen
-  let highscores = JSON.parse(localStorage.getItem("highscores") || "[]");
-
-  // Nieuwe score toevoegen
+  let highscores = JSON.parse(localStorage.getItem("highscores")||"[]");
   highscores.push({ name: localStorage.getItem("username"), score });
-
-  // Scores sorteren (hoogste eerst)
-  highscores.sort((a, b) => b.score - a.score);
-
-  // Opslaan in localStorage
+  highscores.sort((a,b)=>b.score-a.score);
   localStorage.setItem("highscores", JSON.stringify(highscores));
 
-  // Scoreboard opbouwen (top 3)
   scoreboardEl.innerHTML = "<h3>Top 3 Scores:</h3>";
-  highscores.slice(0, 3).forEach((s, index) => {
+  highscores.slice(0,3).forEach((s,index)=>{
     const p = document.createElement("p");
-    p.textContent = `${index + 1}. ${s.name}: ${s.score}`;
+    p.textContent = `${index+1}. ${s.name}: ${s.score}`;
     scoreboardEl.appendChild(p);
   });
-  // OPNIEUW STARTEN
+});
+
+// OPNIEUW STARTEN
 restartBtn.addEventListener("click", ()=>{
   scorePage.classList.remove("active");
   startPage.classList.add("active");
-});
 });

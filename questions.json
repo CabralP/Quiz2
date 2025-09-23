@@ -1,0 +1,38 @@
+{
+  "1": [
+    {"vraag":"Wat is 2+2?","antwoorden":["4","3","5","6"],"correct":"4"},
+    {"vraag":"Welke kleur heeft de lucht?","antwoorden":["Blauw","Groen","Rood","Geel"],"correct":"Blauw"},
+    {"vraag":"Wat is 5+7?","antwoorden":["12","11","13","10"],"correct":"12"},
+    {"vraag":"Welke kleur heeft een banaan?","antwoorden":["Geel","Rood","Blauw","Groen"],"correct":"Geel"},
+    {"vraag":"Hoeveel benen heeft een spin?","antwoorden":["8","6","4","2"],"correct":"8"},
+    {"vraag":"Wat is 9-4?","antwoorden":["5","4","6","7"],"correct":"5"},
+    {"vraag":"Welke planeet staat het dichtst bij de zon?","antwoorden":["Mercurius","Venus","Aarde","Mars"],"correct":"Mercurius"},
+    {"vraag":"Wat is 3×3?","antwoorden":["9","6","12","8"],"correct":"9"},
+    {"vraag":"Welke kleur heeft gras?","antwoorden":["Groen","Blauw","Rood","Geel"],"correct":"Groen"},
+    {"vraag":"Wat is 10/2?","antwoorden":["5","4","6","3"],"correct":"5"}
+  ],
+  "2": [
+    {"vraag":"Wat is de hoofdstad van Frankrijk?","antwoorden":["Parijs","Rome","Berlijn","Madrid"],"correct":"Parijs"},
+    {"vraag":"Wat is 10-3?","antwoorden":["7","8","6","5"],"correct":"7"},
+    {"vraag":"In welk land ligt de stad Tokyo?","antwoorden":["Japan","China","Korea","Thailand"],"correct":"Japan"},
+    {"vraag":"Wat is 15+5?","antwoorden":["20","19","21","22"],"correct":"20"},
+    {"vraag":"Welke rivier stroomt door Londen?","antwoorden":["Theems","Seine","Rijn","Donau"],"correct":"Theems"},
+    {"vraag":"Wat is 7×6?","antwoorden":["42","36","48","40"],"correct":"42"},
+    {"vraag":"Welke zee ligt tussen Saudi-Arabië en Afrika?","antwoorden":["Rode Zee","Zwarte Zee","Middellandse Zee","Kaspische Zee"],"correct":"Rode Zee"},
+    {"vraag":"Wat is 100-45?","antwoorden":["55","50","60","65"],"correct":"55"},
+    {"vraag":"Wat is de hoofdstad van Italië?","antwoorden":["Rome","Milaan","Napels","Venetië"],"correct":"Rome"},
+    {"vraag":"Wat is 8×8?","antwoorden":["64","56","72","60"],"correct":"64"}
+  ],
+  "3": [
+    {"vraag":"Welke planeet staat bekend als rode planeet?","antwoorden":["Mars","Venus","Aarde","Jupiter"],"correct":"Mars"},
+    {"vraag":"Hoeveel ogen heeft een spin?","antwoorden":["8","6","4","2"],"correct":"8"},
+    {"vraag":"Welke planeet staat bekend als 'blauwe planeet'?","antwoorden":["Aarde","Neptunus","Saturnus","Mercurius"],"correct":"Aarde"},
+    {"vraag":"Wat is 12+7?","antwoorden":["19","18","20","17"],"correct":"19"},
+    {"vraag":"Welke ster staat het dichtst bij de aarde?","antwoorden":["De zon","Sirius","Proxima Centauri","Polaris"],"correct":"De zon"},
+    {"vraag":"Wat is 20-8?","antwoorden":["12","10","11","13"],"correct":"12"},
+    {"vraag":"Welke planeet heeft ringen?","antwoorden":["Saturnus","Mars","Venus","Mercurius"],"correct":"Saturnus"},
+    {"vraag":"Wat is 9×5?","antwoorden":["45","40","50","35"],"correct":"45"},
+    {"vraag":"Welke planeet staat bekend als gasreus?","antwoorden":["Jupiter","Mars","Venus","Aarde"],"correct":"Jupiter"},
+    {"vraag":"Wat is 18/2?","antwoorden":["9","8","10","7"],"correct":"9"}
+  ]
+}
