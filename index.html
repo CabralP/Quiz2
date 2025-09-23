@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz App</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- STARTPAGINA -->
+  <div class="container active" id="start-page">
+    <h1>Welkom</h1>
+    <p>Geef hier je uitleg over de quiz</p>
+    <form id="start-form">
+      <label for="name">Wat is je naam?</label>
+      <input type="text" id="name" name="name" placeholder="Vul je naam in" required>
+      <button type="submit">Ga verder</button>
+    </form>
+  </div>
+
+  <!-- THEMASCHERM -->
+  <section class="container" id="theme-page">
+    <div class="intro">
+      <h2 class="teamnaam">[Teamnaam]</h2>
+      <h1>
+        Hallo <em id="speler-naam">[naam speler]</em>,<br>
+        welke quiz wil je spelen?
+      </h1>
+    </div>
+    <section class="themas">
+      <div class="thema" data-theme="1"><a href="#">Thema 1</a></div>
+      <div class="thema" data-theme="2"><a href="#">Thema 2</a></div>
+      <div class="thema" data-theme="3"><a href="#">Thema 3</a></div>
+    </section>
+  </section>
+
+  <!-- QUIZPAGINA -->
+  <div class="quiz-container container" id="quiz-page">
+    <h2 id="vraag-tekst">Vraag</h2>
+    <div class="image-placeholder">
+      <p id="vraag-afbeelding">[ Afbeelding ]</p>
+    </div>
+    <div class="teamname" id="quiz-teamnaam">[Teamnaam]</div>
+    <div class="answers" id="answers"></div>
+    <div class="timer" id="timer">Timer</div>
+    <div class="feedback" id="feedback"></div>
+    <button id="next-btn" style="display:none;">Volgende vraag</button>
+  </div>
+
+  <!-- RESULTATENPAGINA -->
+  <div class="container" id="result-page">
+    <h1>Resultaten</h1>
+    <div id="result-details"></div>
+    <button id="to-scoreboard-btn">Bekijk Scoreboard</button>
+  </div>
+
+  <!-- SCOREBOARD -->
+  <div class="container" id="score-page">
+    <h1>Scoreboard</h1>
+    <div id="scoreboard"></div>
+    <button id="restart-btn">Speel opnieuw</button>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
