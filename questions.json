@@ -1,27 +1,28 @@
 {
   "1": [
-    {"vraag":"Wat is 2+2?","antwoorden":["4","3","5","6"],"correct":"4"},
-    {"vraag":"Welke kleur heeft de lucht?","antwoorden":["Blauw","Groen","Rood","Geel"],"correct":"Blauw"},
-    {"vraag":"Wat is 5+7?","antwoorden":["12","11","13","10"],"correct":"12"},
-    {"vraag":"Welke kleur heeft een banaan?","antwoorden":["Geel","Rood","Blauw","Groen"],"correct":"Geel"},
-    {"vraag":"Hoeveel benen heeft een spin?","antwoorden":["8","6","4","2"],"correct":"8"},
-    {"vraag":"Wat is 9-4?","antwoorden":["5","4","6","7"],"correct":"5"},
-    {"vraag":"Welke planeet staat het dichtst bij de zon?","antwoorden":["Mercurius","Venus","Aarde","Mars"],"correct":"Mercurius"},
-    {"vraag":"Wat is 3×3?","antwoorden":["9","6","12","8"],"correct":"9"},
-    {"vraag":"Welke kleur heeft gras?","antwoorden":["Groen","Blauw","Rood","Geel"],"correct":"Groen"},
-    {"vraag":"Wat is 10/2?","antwoorden":["5","4","6","3"],"correct":"5"}
+    {"vraag":"Hoeveel minuten duurt een officiële voetbalwedstrijd?","antwoorden":["60min","80min","90min","100min"],"correct":"90min"},
+    {"vraag":"Welke kleur heeft de finishvlag in Formule 1?","antwoorden":["Blauw-wit","Zwart-wit","Rood-wit","Geel-wit"],"correct":"Zwart-wit"},
+    {"vraag":"Hoeveel ringen staan er in het olympisch logo?","antwoorden":["5","7","4","6"],"correct":"5"},
+    {"vraag":"Welke sport speel je met een bal en twee doelen?","antwoorden":["Voetbal","Hockey","Basketbal","Tennis"],"correct":"Voetbal"},
+    {"vraag":"Welke sport speel je met een basket en een oranje bal?","antwoorden":["Tennis","Voetbal","Hockey","Basketbal"],"correct":"Basketbal"},
+    {"vraag":"Hoeveel spelers staan er op het veld in één voetbalteam?","antwoorden":["10","11","9","12"],"correct":"11"},
+    {"vraag":"Wie is de legendarische voetbal speler?","antwoorden":["Cristiano Ronaldo","L.Messi","Neymar.Jr","Maradona"],"correct":"Cristiano Ronaldo"},
+    {"vraag":"Welke kleur kaart geeft een scheidsrechter bij een ernstige overtreding in voetbal?","antwoorden":["Groen","Geel","Rood","Blauw"],"correct":"Rood"},
+    {"vraag":"Welke sport speel je met een shuttle en een net, meestal binnenshuis?","antwoorden":["Badminton","Tennis","Squash","Voetbal"],"correct":"Badminton"},
+    {"vraag":"Hoeveel spelers telt een basketbalteam op het veld?","antwoorden":["3","4","6","5"],"correct":"5"}
   ],
   "2": [
-    {"vraag":"Wat is de hoofdstad van Frankrijk?","antwoorden":["Parijs","Rome","Berlijn","Madrid"],"correct":"Parijs"},
-    {"vraag":"Wat is 10-3?","antwoorden":["7","8","6","5"],"correct":"7"},
-    {"vraag":"In welk land ligt de stad Tokyo?","antwoorden":["Japan","China","Korea","Thailand"],"correct":"Japan"},
-    {"vraag":"Wat is 15+5?","antwoorden":["20","19","21","22"],"correct":"20"},
+    {"vraag":"Wat is de hoofdstad van Frankrijk?","antwoorden":["Berlijn","Rome","Parijs","Madrid"],"correct":"Parijs"},
+    {"vraag":"Wie ontdekte Amerika in 1492?","antwoorden":["Columbus","Magellaan","Vespucci","Cortez"],"correct":"Columbus"},
+    {"vraag":"Welke berg is de hoogste ter wereld?","antwoorden":["Mount Everest","K2","Kangchenjunga","Lhotse"],"correct":"Mount Everest"},
+    {"vraag":"In welk land ligt de stad Tokyo?","antwoorden":["Thailand","China","Korea","Japan"],"correct":"Japan"},
+    {"vraag":"Welke muur viel in 1989 en symboliseerde het einde van de Koude Oorlog?","antwoorden":["Grote Muur van China","Berlijnse Muur","Hadrianus muur","Maginot lijn"],"correct":"Berlijnse Muur"},
     {"vraag":"Welke rivier stroomt door Londen?","antwoorden":["Theems","Seine","Rijn","Donau"],"correct":"Theems"},
-    {"vraag":"Wat is 7×6?","antwoorden":["42","36","48","40"],"correct":"42"},
+    {"vraag":"In welk land begon de Tweede Wereldoorlog in 1939?","antwoorden":["Duitsland","Frankrijk","Engeland","Rusland"],"correct":"Duitsland"},
     {"vraag":"Welke zee ligt tussen Saudi-Arabië en Afrika?","antwoorden":["Rode Zee","Zwarte Zee","Middellandse Zee","Kaspische Zee"],"correct":"Rode Zee"},
-    {"vraag":"Wat is 100-45?","antwoorden":["55","50","60","65"],"correct":"55"},
-    {"vraag":"Wat is de hoofdstad van Italië?","antwoorden":["Rome","Milaan","Napels","Venetië"],"correct":"Rome"},
-    {"vraag":"Wat is 8×8?","antwoorden":["64","56","72","60"],"correct":"64"}
+    {"vraag":"Wie schilderde de Mona Lisa?","antwoorden":["Michelangelo","Leonardo Da Vinci","Raphael","Van Gogh"],"correct":"Leonardo Da Vinci"},
+    {"vraag":"Wat is de hoofdstad van Italië?","antwoorden":["Napels","Milaan","Rome","Venetië"],"correct":"Rome"},
+    {"vraag":"In welk jaar begon de Eerste Wereldoorlog?","antwoorden":["1945","1918","2025","1914"],"correct":"1914"}
   ],
   "3": [
     {"vraag":"Welke planeet staat bekend als rode planeet?","antwoorden":["Mars","Venus","Aarde","Jupiter"],"correct":"Mars"},
