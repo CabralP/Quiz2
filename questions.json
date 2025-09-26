@@ -28,12 +28,12 @@
     {"vraag":"Welke planeet staat bekend als rode planeet?","antwoorden":["Mars","Venus","Aarde","Jupiter"],"correct":"Mars"},
     {"vraag":"Hoeveel ogen heeft een spin?","antwoorden":["8","6","4","2"],"correct":"8"},
     {"vraag":"Welke planeet staat bekend als 'blauwe planeet'?","antwoorden":["Aarde","Neptunus","Saturnus","Mercurius"],"correct":"Aarde"},
-    {"vraag":"Wat is 12+7?","antwoorden":["19","18","20","17"],"correct":"19"},
+    {"vraag":"Wat is de grootste planeet in ons zonnestelsel?","antwoorden":["Jupiter","Saturnus","Neptunus","Aarde"],"correct":"Jupiter"},
     {"vraag":"Welke ster staat het dichtst bij de aarde?","antwoorden":["De zon","Sirius","Proxima Centauri","Polaris"],"correct":"De zon"},
-    {"vraag":"Wat is 20-8?","antwoorden":["12","10","11","13"],"correct":"12"},
+    {"vraag":"Welke stof ademen mensen in om te leven?","antwoorden":["Stikstof","Zuurstof","Koolstofdioxide","Helium"],"correct":"Zuurstof"},
     {"vraag":"Welke planeet heeft ringen?","antwoorden":["Saturnus","Mars","Venus","Mercurius"],"correct":"Saturnus"},
-    {"vraag":"Wat is 9×5?","antwoorden":["45","40","50","35"],"correct":"45"},
-    {"vraag":"Welke planeet staat bekend als gasreus?","antwoorden":["Jupiter","Mars","Venus","Aarde"],"correct":"Jupiter"},
-    {"vraag":"Wat is 18/2?","antwoorden":["9","8","10","7"],"correct":"9"}
+    {"vraag":"Wie vond de zwaartekrachtwet?","antwoorden":["Newton","Einstein","Galileo","Kepler"],"correct":"Newton"},
+    {"vraag":"Wat is het symbool van water in scheikunde?","antwoorden":["H2O","O2","CO2","NaCl"],"correct":"H2O"},
+    {"vraag":"Hoeveel planeten zijn er in ons zonnestelsel (vanaf 2006, na uitsluiting van Pluto)?","antwoorden":["9","8","10","7"],"correct":"8"}
   ]
 }
