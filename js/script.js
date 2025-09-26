@@ -9,7 +9,8 @@ const scorePage = document.getElementById("score-page");  // Scoreboard containe
 
 const form = document.getElementById("start-form");       // Formulier startpagina
 const spelerNaamEl = document.getElementById("speler-naam"); // Element waar spelernaam wordt getoond
-const teamNaamEls = document.querySelectorAll(".teamnaam");  // Alle elementen met teamnaam
+const teamNaamEls = document.querySelectorAll(".teamnaam");  // Alle elementen met class="teamnaam"
+const quizTeamNaam = document.getElementById("quiz-teamnaam"); // ✅ Teamnaam op de quizpagina
 
 const answersContainer = document.getElementById("answers"); // Container voor antwoord-buttons
 const vraagTekst = document.getElementById("vraag-tekst");   // Element voor vraagtekst
@@ -61,6 +62,7 @@ form.addEventListener("submit", e=>{
   localStorage.setItem("username", name); // Sla naam op in localStorage
   spelerNaamEl.textContent = name; // Toon naam in intro
   teamNaamEls.forEach(el => el.textContent = name); // Update alle teamnaam velden
+  quizTeamNaam.textContent = name; // ✅ Zet naam ook bij de quizpagina
   startPage.classList.remove("active"); // Verberg startpagina
   themePage.classList.add("active");    // Toon themapagina
 });
@@ -89,6 +91,9 @@ function showQuestion(){
   const q = currentQuestions[currentIndex]; // Huidige vraag
   vraagTekst.textContent = q.vraag;         // Zet vraagtekst
   answersContainer.innerHTML = "";          // Maak oude antwoorden leeg
+
+  // ✅ Update teamnaam steeds opnieuw (voor de zekerheid)
+  quizTeamNaam.textContent = localStorage.getItem("username");
 
   // Maak buttons voor elk antwoord
   shuffle([...q.antwoorden]).forEach(ans=>{
@@ -151,6 +156,12 @@ function showResults(){
   quizPage.classList.remove("active");  // Verberg quizpagina
   resultPage.classList.add("active");    // Toon resultatenpagina
   resultDetailsEl.innerHTML = "";        // Maak oude resultaten leeg
+
+  // ✅ Laat ook zien voor wie de resultaten zijn
+  const name = localStorage.getItem("username");
+  const header = document.createElement("h2");
+  header.textContent = `Resultaten voor ${name}`;
+  resultDetailsEl.appendChild(header);
 
   // Loop door alle antwoorden
   answersHistory.forEach((a,i)=>{
