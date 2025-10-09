@@ -8,32 +8,33 @@ const resultPage = document.getElementById("result-page"); // Resultaten contain
 const scorePage = document.getElementById("score-page");  // Scoreboard container
 
 const form = document.getElementById("start-form");       // Formulier startpagina
-const spelerNaamEl = document.getElementById("speler-naam"); // Element waar spelernaam wordt getoond
-const teamNaamEls = document.querySelectorAll(".teamnaam");  // Alle elementen met class="teamnaam"
-const quizTeamNaam = document.getElementById("quiz-teamnaam"); // ✅ Teamnaam op de quizpagina
+const spelerNaamEl = document.getElementById("speler-naam"); // Naam speler in tekst
+const teamNaamEls = document.querySelectorAll(".teamnaam");  // Alle plekken waar teamnaam komt
+const quizTeamNaam = document.getElementById("quiz-teamnaam"); // Teamnaam op quizpagina
 
-const answersContainer = document.getElementById("answers"); // Container voor antwoord-buttons
-const vraagTekst = document.getElementById("vraag-tekst");   // Element voor vraagtekst
-const timerEl = document.getElementById("timer");            // Element voor timer
+const answersContainer = document.getElementById("answers"); // Container voor antwoordknoppen
+const vraagTekst = document.getElementById("vraag-tekst");   // Vraagtekst
+const vraagAfbeelding = document.getElementById("vraag-afbeelding"); // Plek voor afbeelding
+const timerEl = document.getElementById("timer");            // Timertekst
 
-const resultDetailsEl = document.getElementById("result-details"); // Container resultaten
+const resultDetailsEl = document.getElementById("result-details"); // Resultaatdetails container
 const toScoreboardBtn = document.getElementById("to-scoreboard-btn"); // Knop naar scoreboard
 
-const scoreboardEl = document.getElementById("scoreboard"); // Scoreboard container
+const scoreboardEl = document.getElementById("scoreboard"); // Scoreboard
 const restartBtn = document.getElementById("restart-btn");  // Knop opnieuw starten
 
 // =======================
 // VARIABELEN QUIZLOGICA
 // =======================
 let countdown;                // Timer interval
-const timePerQuestion = 15;   // Tijdslimiet per vraag (seconden)
+const timePerQuestion = 15;   // Tijdslimiet per vraag in seconden
 
-let quizData = {};             // Hier komt JSON-data in
-let currentTheme;              // Huidig gekozen thema
-let currentQuestions = [];     // Huidige set van 10 vragen
-let currentIndex = 0;          // Huidige vraagindex
-let score = 0;                 // Score van de speler
-let answersHistory = [];       // Historie van antwoorden (voor resultaten)
+let quizData = {};             // Hier wordt de JSON data geladen
+let currentTheme;              // Geselecteerde thema
+let currentQuestions = [];     // Lijst met huidige vragen
+let currentIndex = 0;          // Index van de huidige vraag
+let score = 0;                 // Score van speler
+let answersHistory = [];       // Antwoordgeschiedenis voor resultaten
 
 // =======================
 // QUIZ DATA LADEN VAN JSON
@@ -41,110 +42,122 @@ let answersHistory = [];       // Historie van antwoorden (voor resultaten)
 fetch("questions.json")
   .then(response => response.json())
   .then(data => {
-    quizData = data; // JSON-data in quizData
+    quizData = data; // Zet JSON data in quizData variabele
   })
   .catch(error => console.error("Fout bij laden van questions.json:", error));
 
 // =======================
-// HELPER FUNCTIE
+// HELPER FUNCTIE: SHUFFLE
 // =======================
-function shuffle(array){ 
-  // Husselt een array willekeurig
-  return array.sort(()=> Math.random()-0.5); 
+function shuffle(array) {
+  // Willekeurige volgorde voor array
+  return array.sort(() => Math.random() - 0.5);
 }
 
 // =======================
 // STARTPAGINA -> THEMAPAGINA
 // =======================
-form.addEventListener("submit", e=>{
-  e.preventDefault(); // Voorkomt herladen van pagina
-  const name = document.getElementById("name").value || "Gast"; // Haal naam op
-  localStorage.setItem("username", name); // Sla naam op in localStorage
-  spelerNaamEl.textContent = name; // Toon naam in intro
-  teamNaamEls.forEach(el => el.textContent = name); // Update alle teamnaam velden
-  quizTeamNaam.textContent = name; // ✅ Zet naam ook bij de quizpagina
-  startPage.classList.remove("active"); // Verberg startpagina
-  themePage.classList.add("active");    // Toon themapagina
+form.addEventListener("submit", e => {
+  e.preventDefault(); // Voorkom pagina-herladen
+  const name = document.getElementById("name").value || "Gast"; // Naam ophalen
+  localStorage.setItem("username", name); // Opslaan in localStorage
+
+  // Toon naam op verschillende plekken
+  spelerNaamEl.textContent = name;
+  teamNaamEls.forEach(el => el.textContent = name);
+  quizTeamNaam.textContent = name; // ✅ Zet teamnaam ook op quizpagina
+
+  // Wissel pagina's
+  startPage.classList.remove("active");
+  themePage.classList.add("active");
 });
 
 // =======================
 // THEMA SELECTEREN -> QUIZ STARTEN
 // =======================
-document.querySelectorAll(".thema").forEach(block=>{
-  block.addEventListener("click", ()=>{
-    currentTheme = block.dataset.theme; // Kies thema
-    // Kies 10 willekeurige vragen uit het thema
-    currentQuestions = shuffle([...quizData[currentTheme]]).slice(0,10);
-    currentIndex = 0;  // Reset vraagindex
-    score = 0;         // Reset score
-    answersHistory = []; // Reset antwoordgeschiedenis
-    themePage.classList.remove("active"); // Verberg themapagina
-    quizPage.classList.add("active");     // Toon quizpagina
-    showQuestion();                       // Start quiz met eerste vraag
+document.querySelectorAll(".thema").forEach(block => {
+  block.addEventListener("click", () => {
+    currentTheme = block.dataset.theme; // Geselecteerd thema
+    currentQuestions = shuffle([...quizData[currentTheme]]).slice(0, 10); // 10 willekeurige vragen
+    currentIndex = 0;
+    score = 0;
+    answersHistory = [];
+
+    themePage.classList.remove("active");
+    quizPage.classList.add("active");
+
+    showQuestion(); // Eerste vraag tonen
   });
 });
 
 // =======================
-// TOON VRAAG EN ANTWOORDEN
+// TOON VRAAG + ANTWOORDEN
 // =======================
-function showQuestion(){
+function showQuestion() {
   const q = currentQuestions[currentIndex]; // Huidige vraag
   vraagTekst.textContent = q.vraag;         // Zet vraagtekst
   answersContainer.innerHTML = "";          // Maak oude antwoorden leeg
 
-  // ✅ Update teamnaam steeds opnieuw (voor de zekerheid)
-  quizTeamNaam.textContent = localStorage.getItem("username");
+  // ✅ Toon afbeelding als aanwezig
+  if (q.afbeelding) {
+    vraagAfbeelding.innerHTML = `<img src="${q.afbeelding}" alt="Afbeelding bij vraag" style="max-width:100%; border-radius:8px;">`;
+  } else {
+    vraagAfbeelding.textContent = "[ Geen afbeelding beschikbaar ]";
+  }
 
-  // Maak buttons voor elk antwoord
-  shuffle([...q.antwoorden]).forEach(ans=>{
+  // Maak antwoordknoppen
+  shuffle([...q.antwoorden]).forEach(ans => {
     const btn = document.createElement("button");
     btn.textContent = ans;
-    btn.addEventListener("click", ()=> handleAnswer(ans)); // Klik = antwoord verwerken
+    btn.addEventListener("click", () => handleAnswer(ans)); // Klik = verwerken
     answersContainer.appendChild(btn);
   });
 
-  startTimer(timePerQuestion); // Start de timer voor deze vraag
+  startTimer(timePerQuestion); // Start timer
 }
 
 // =======================
-// ANTWOORD VERWERKEN EN VOLGENDE VRAAG
+// ANTWOORD VERWERKEN
 // =======================
-function handleAnswer(selected){
+function handleAnswer(selected) {
   clearInterval(countdown); // Stop timer
-  const correct = currentQuestions[currentIndex].correct; // Correct antwoord
-  let correctFlag = selected === correct; // Check of goed
-  if(correctFlag) score++; // Score verhogen als correct
 
-  // Sla antwoord op in historie
+  const correct = currentQuestions[currentIndex].correct; // Correcte antwoord
+  let correctFlag = selected === correct;
+
+  if (correctFlag) score++; // Score +1 als juist
+
+  // Bewaar resultaat in geschiedenis
   answersHistory.push({
     vraag: currentQuestions[currentIndex].vraag,
     gekozen: selected,
     correct: correct,
-    correctFlag: correctFlag
+    correctFlag: correctFlag,
+    afbeelding: currentQuestions[currentIndex].afbeelding || null
   });
 
   currentIndex++; // Volgende vraag
-  if(currentIndex < currentQuestions.length){
-    showQuestion(); // Toon volgende vraag
+  if (currentIndex < currentQuestions.length) {
+    showQuestion();
   } else {
-    showResults();  // Toon resultaten als klaar
+    showResults(); // Klaar
   }
 }
 
 // =======================
-// TIMER PER VRAAG
+// TIMER FUNCTIE
 // =======================
-function startTimer(seconds){
+function startTimer(seconds) {
   let timeLeft = seconds;
   timerEl.textContent = `Tijd: ${timeLeft}s`;
 
-  countdown = setInterval(()=>{
+  countdown = setInterval(() => {
     timeLeft--;
     timerEl.textContent = `Tijd: ${timeLeft}s`;
 
-    if(timeLeft < 0){
-      clearInterval(countdown);   // Stop timer
-      handleAnswer("");           // Leeg antwoord = fout
+    if (timeLeft < 0) {
+      clearInterval(countdown);
+      handleAnswer(""); // Geen antwoord = fout
     }
   }, 1000);
 }
@@ -152,24 +165,22 @@ function startTimer(seconds){
 // =======================
 // RESULTATEN TONEN
 // =======================
-function showResults(){
-  quizPage.classList.remove("active");  // Verberg quizpagina
-  resultPage.classList.add("active");    // Toon resultatenpagina
-  resultDetailsEl.innerHTML = "";        // Maak oude resultaten leeg
+function showResults() {
+  quizPage.classList.remove("active");
+  resultPage.classList.add("active");
+  resultDetailsEl.innerHTML = "";
 
-  // ✅ Laat ook zien voor wie de resultaten zijn
-  const name = localStorage.getItem("username");
-  const header = document.createElement("h2");
-  header.textContent = `Resultaten voor ${name}`;
-  resultDetailsEl.appendChild(header);
-
-  // Loop door alle antwoorden
-  answersHistory.forEach((a,i)=>{
+  // Toon alle vragen en antwoorden
+  answersHistory.forEach((a, i) => {
     const div = document.createElement("div");
-    div.innerHTML = `<strong>Vraag ${i+1}:</strong> ${a.vraag}<br>
-      Jouw antwoord: ${a.gekozen || "niet beantwoord"}<br>
-      Correct antwoord: ${a.correct} <br>
-      ${a.correctFlag ? "✔ Goed" : "✖ Fout"}<hr>`;
+    div.innerHTML = `
+      <strong>Vraag ${i + 1}:</strong> ${a.vraag}<br>
+      ${a.afbeelding ? `<img src="${a.afbeelding}" alt="afbeelding" style="max-width:200px; border-radius:6px;">` : ""}
+      <br>Jouw antwoord: ${a.gekozen || "Niet beantwoord"}<br>
+      Correct antwoord: ${a.correct}<br>
+      ${a.correctFlag ? "✔ Goed" : "✖ Fout"}
+      <hr>
+    `;
     resultDetailsEl.appendChild(div);
   });
 }
@@ -177,23 +188,24 @@ function showResults(){
 // =======================
 // SCOREBOARD
 // =======================
-toScoreboardBtn.addEventListener("click", ()=>{
-  resultPage.classList.remove("active"); // Verberg resultatenpagina
-  scorePage.classList.add("active");     // Toon scoreboard
+toScoreboardBtn.addEventListener("click", () => {
+  resultPage.classList.remove("active");
+  scorePage.classList.add("active");
 
-  // Haal bestaande highscores op
-  let highscores = JSON.parse(localStorage.getItem("highscores")||"[]");
+  let highscores = JSON.parse(localStorage.getItem("highscores") || "[]");
 
-  // Voeg nieuwe score toe
+  // Nieuwe score toevoegen
   highscores.push({ name: localStorage.getItem("username"), score });
-  highscores.sort((a,b)=>b.score-a.score); // Sorteer van hoog naar laag
-  localStorage.setItem("highscores", JSON.stringify(highscores)); // Opslaan
 
-  // Toon top 3 scores
+  // Sorteren en opslaan
+  highscores.sort((a, b) => b.score - a.score);
+  localStorage.setItem("highscores", JSON.stringify(highscores));
+
+  // ✅ Top 3 tonen
   scoreboardEl.innerHTML = "<h3>Top 3 Scores:</h3>";
-  highscores.slice(0,3).forEach((s,index)=>{
+  highscores.slice(0, 3).forEach((s, index) => {
     const p = document.createElement("p");
-    p.textContent = `${index+1}. ${s.name}: ${s.score}`;
+    p.textContent = `${index + 1}. ${s.name}: ${s.score}`;
     scoreboardEl.appendChild(p);
   });
 });
@@ -201,7 +213,7 @@ toScoreboardBtn.addEventListener("click", ()=>{
 // =======================
 // OPNIEUW STARTEN
 // =======================
-restartBtn.addEventListener("click", ()=>{
-  scorePage.classList.remove("active"); // Verberg scoreboard
-  startPage.classList.add("active");    // Toon startpagina
+restartBtn.addEventListener("click", () => {
+  scorePage.classList.remove("active");
+  startPage.classList.add("active");
 });

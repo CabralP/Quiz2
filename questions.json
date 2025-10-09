@@ -4,7 +4,7 @@
       "vraag": "Hoeveel minuten duurt een officiële voetbalwedstrijd?",
       "antwoorden": ["60min", "80min", "90min", "100min"],
       "correct": "90min",
-      "image": "/images/bal.jpg"
+      "image": "/img/bal.jpg"
     },
     {
       "vraag": "Welke kleur heeft de finishvlag in Formule 1?",
