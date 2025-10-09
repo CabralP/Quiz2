@@ -100,7 +100,7 @@ function showQuestion() {
 
   // ✅ Toon afbeelding als aanwezig
   if (q.afbeelding) {
-    vraagAfbeelding.innerHTML = `<img src="${q.afbeelding}" alt="Afbeelding bij vraag" style="max-width:100%; border-radius:8px;">`;
+    vraagAfbeelding.innerHTML = `<img src="${q.img}" alt="Afbeelding bij vraag" style="max-width:100%; border-radius:8px;">`;
   } else {
     vraagAfbeelding.textContent = "[ Geen afbeelding beschikbaar ]";
   }
