@@ -10,55 +10,55 @@
       "vraag": "Welke kleur heeft de finishvlag in Formule 1?",
       "antwoorden": ["Blauw-wit", "Zwart-wit", "Rood-wit", "Geel-wit"],
       "correct": "Zwart-wit",
-      "image": null
+      "image": "/img/bal.jpg"
     },
     {
       "vraag": "Hoeveel ringen staan er in het olympisch logo?",
       "antwoorden": ["5", "7", "4", "6"],
       "correct": "5",
-      "image": null
+      "image": "/img/bal.jpg"
     },
     {
       "vraag": "Welke sport speel je met een bal en twee doelen?",
       "antwoorden": ["Voetbal", "Hockey", "Basketbal", "Tennis"],
       "correct": "Voetbal",
-      "image": null
+      "image": "/img/bal.jpg"
     },
     {
       "vraag": "Welke sport speel je met een basket en een oranje bal?",
       "antwoorden": ["Tennis", "Voetbal", "Hockey", "Basketbal"],
       "correct": "Basketbal",
-      "image": null
+      "image": "/img/bal.jpg"
     },
     {
       "vraag": "Hoeveel spelers staan er op het veld in één voetbalteam?",
       "antwoorden": ["10", "11", "9", "12"],
       "correct": "11",
-      "image": null
+      "image": "/img/bal.jpg"
     },
     {
       "vraag": "Wie is de legendarische voetbal speler?",
       "antwoorden": ["Cristiano Ronaldo", "L.Messi", "Neymar.Jr", "Maradona"],
       "correct": "Cristiano Ronaldo",
-      "image": null
+      "image": "/img/bal.jpg"
     },
     {
       "vraag": "Welke kleur kaart geeft een scheidsrechter bij een ernstige overtreding in voetbal?",
       "antwoorden": ["Groen", "Geel", "Rood", "Blauw"],
       "correct": "Rood",
-      "image": null
+      "image": "/img/bal.jpg"
     },
     {
       "vraag": "Welke sport speel je met een shuttle en een net, meestal binnenshuis?",
       "antwoorden": ["Badminton", "Tennis", "Squash", "Voetbal"],
       "correct": "Badminton",
-      "image": null
+      "image": "/img/bal.jpg"
     },
     {
       "vraag": "Hoeveel spelers telt een basketbalteam op het veld?",
       "antwoorden": ["3", "4", "6", "5"],
       "correct": "5",
-      "image": null
+      "image": "/img/bal.jpg"
     }
   ],
   "2": [
