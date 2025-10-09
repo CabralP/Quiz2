@@ -1,39 +1,194 @@
 {
   "1": [
-    {"vraag":"Hoeveel minuten duurt een officiële voetbalwedstrijd?","antwoorden":["60min","80min","90min","100min"],"correct":"90min"},"image"{:"/images/"}
-    {"vraag":"Welke kleur heeft de finishvlag in Formule 1?","antwoorden":["Blauw-wit","Zwart-wit","Rood-wit","Geel-wit"],"correct":"Zwart-wit"},
-    {"vraag":"Hoeveel ringen staan er in het olympisch logo?","antwoorden":["5","7","4","6"],"correct":"5"},
-    {"vraag":"Welke sport speel je met een bal en twee doelen?","antwoorden":["Voetbal","Hockey","Basketbal","Tennis"],"correct":"Voetbal"},
-    {"vraag":"Welke sport speel je met een basket en een oranje bal?","antwoorden":["Tennis","Voetbal","Hockey","Basketbal"],"correct":"Basketbal"},
-    {"vraag":"Hoeveel spelers staan er op het veld in één voetbalteam?","antwoorden":["10","11","9","12"],"correct":"11"},
-    {"vraag":"Wie is de legendarische voetbal speler?","antwoorden":["Cristiano Ronaldo","L.Messi","Neymar.Jr","Maradona"],"correct":"Cristiano Ronaldo"},
-    {"vraag":"Welke kleur kaart geeft een scheidsrechter bij een ernstige overtreding in voetbal?","antwoorden":["Groen","Geel","Rood","Blauw"],"correct":"Rood"},
-    {"vraag":"Welke sport speel je met een shuttle en een net, meestal binnenshuis?","antwoorden":["Badminton","Tennis","Squash","Voetbal"],"correct":"Badminton"},
-    {"vraag":"Hoeveel spelers telt een basketbalteam op het veld?","antwoorden":["3","4","6","5"],"correct":"5"}
+    {
+      "vraag": "Hoeveel minuten duurt een officiële voetbalwedstrijd?",
+      "antwoorden": ["60min", "80min", "90min", "100min"],
+      "correct": "90min",
+      "image": null
+    },
+    {
+      "vraag": "Welke kleur heeft de finishvlag in Formule 1?",
+      "antwoorden": ["Blauw-wit", "Zwart-wit", "Rood-wit", "Geel-wit"],
+      "correct": "Zwart-wit",
+      "image": null
+    },
+    {
+      "vraag": "Hoeveel ringen staan er in het olympisch logo?",
+      "antwoorden": ["5", "7", "4", "6"],
+      "correct": "5",
+      "image": null
+    },
+    {
+      "vraag": "Welke sport speel je met een bal en twee doelen?",
+      "antwoorden": ["Voetbal", "Hockey", "Basketbal", "Tennis"],
+      "correct": "Voetbal",
+      "image": null
+    },
+    {
+      "vraag": "Welke sport speel je met een basket en een oranje bal?",
+      "antwoorden": ["Tennis", "Voetbal", "Hockey", "Basketbal"],
+      "correct": "Basketbal",
+      "image": null
+    },
+    {
+      "vraag": "Hoeveel spelers staan er op het veld in één voetbalteam?",
+      "antwoorden": ["10", "11", "9", "12"],
+      "correct": "11",
+      "image": null
+    },
+    {
+      "vraag": "Wie is de legendarische voetbal speler?",
+      "antwoorden": ["Cristiano Ronaldo", "L.Messi", "Neymar.Jr", "Maradona"],
+      "correct": "Cristiano Ronaldo",
+      "image": null
+    },
+    {
+      "vraag": "Welke kleur kaart geeft een scheidsrechter bij een ernstige overtreding in voetbal?",
+      "antwoorden": ["Groen", "Geel", "Rood", "Blauw"],
+      "correct": "Rood",
+      "image": null
+    },
+    {
+      "vraag": "Welke sport speel je met een shuttle en een net, meestal binnenshuis?",
+      "antwoorden": ["Badminton", "Tennis", "Squash", "Voetbal"],
+      "correct": "Badminton",
+      "image": null
+    },
+    {
+      "vraag": "Hoeveel spelers telt een basketbalteam op het veld?",
+      "antwoorden": ["3", "4", "6", "5"],
+      "correct": "5",
+      "image": null
+    }
   ],
   "2": [
-    {"vraag":"Wat is de hoofdstad van Frankrijk?","antwoorden":["Berlijn","Rome","Parijs","Madrid"],"correct":"Parijs"},
-    {"vraag":"Wie ontdekte Amerika in 1492?","antwoorden":["Columbus","Magellaan","Vespucci","Cortez"],"correct":"Columbus"},
-    {"vraag":"Welke berg is de hoogste ter wereld?","antwoorden":["Mount Everest","K2","Kangchenjunga","Lhotse"],"correct":"Mount Everest"},
-    {"vraag":"In welk land ligt de stad Tokyo?","antwoorden":["Thailand","China","Korea","Japan"],"correct":"Japan"},
-    {"vraag":"Welke muur viel in 1989 en symboliseerde het einde van de Koude Oorlog?","antwoorden":["Grote Muur van China","Berlijnse Muur","Hadrianus muur","Maginot lijn"],"correct":"Berlijnse Muur"},
-    {"vraag":"Welke rivier stroomt door Londen?","antwoorden":["Theems","Seine","Rijn","Donau"],"correct":"Theems"},
-    {"vraag":"In welk land begon de Tweede Wereldoorlog in 1939?","antwoorden":["Duitsland","Frankrijk","Engeland","Rusland"],"correct":"Duitsland"},
-    {"vraag":"Welke zee ligt tussen Saudi-Arabië en Afrika?","antwoorden":["Rode Zee","Zwarte Zee","Middellandse Zee","Kaspische Zee"],"correct":"Rode Zee"},
-    {"vraag":"Wie schilderde de Mona Lisa?","antwoorden":["Michelangelo","Leonardo Da Vinci","Raphael","Van Gogh"],"correct":"Leonardo Da Vinci"},
-    {"vraag":"Wat is de hoofdstad van Italië?","antwoorden":["Napels","Milaan","Rome","Venetië"],"correct":"Rome"},
-    {"vraag":"In welk jaar begon de Eerste Wereldoorlog?","antwoorden":["1945","1918","2025","1914"],"correct":"1914"}
+    {
+      "vraag": "Wat is de hoofdstad van Frankrijk?",
+      "antwoorden": ["Berlijn", "Rome", "Parijs", "Madrid"],
+      "correct": "Parijs",
+      "image": null
+    },
+    {
+      "vraag": "Wie ontdekte Amerika in 1492?",
+      "antwoorden": ["Columbus", "Magellaan", "Vespucci", "Cortez"],
+      "correct": "Columbus",
+      "image": null
+    },
+    {
+      "vraag": "Welke berg is de hoogste ter wereld?",
+      "antwoorden": ["Mount Everest", "K2", "Kangchenjunga", "Lhotse"],
+      "correct": "Mount Everest",
+      "image": null
+    },
+    {
+      "vraag": "In welk land ligt de stad Tokyo?",
+      "antwoorden": ["Thailand", "China", "Korea", "Japan"],
+      "correct": "Japan",
+      "image": null
+    },
+    {
+      "vraag": "Welke muur viel in 1989 en symboliseerde het einde van de Koude Oorlog?",
+      "antwoorden": ["Grote Muur van China", "Berlijnse Muur", "Hadrianus muur", "Maginot lijn"],
+      "correct": "Berlijnse Muur",
+      "image": null
+    },
+    {
+      "vraag": "Welke rivier stroomt door Londen?",
+      "antwoorden": ["Theems", "Seine", "Rijn", "Donau"],
+      "correct": "Theems",
+      "image": null
+    },
+    {
+      "vraag": "In welk land begon de Tweede Wereldoorlog in 1939?",
+      "antwoorden": ["Duitsland", "Frankrijk", "Engeland", "Rusland"],
+      "correct": "Duitsland",
+      "image": null
+    },
+    {
+      "vraag": "Welke zee ligt tussen Saudi-Arabië en Afrika?",
+      "antwoorden": ["Rode Zee", "Zwarte Zee", "Middellandse Zee", "Kaspische Zee"],
+      "correct": "Rode Zee",
+      "image": null
+    },
+    {
+      "vraag": "Wie schilderde de Mona Lisa?",
+      "antwoorden": ["Michelangelo", "Leonardo Da Vinci", "Raphael", "Van Gogh"],
+      "correct": "Leonardo Da Vinci",
+      "image": null
+    },
+    {
+      "vraag": "Wat is de hoofdstad van Italië?",
+      "antwoorden": ["Napels", "Milaan", "Rome", "Venetië"],
+      "correct": "Rome",
+      "image": null
+    },
+    {
+      "vraag": "In welk jaar begon de Eerste Wereldoorlog?",
+      "antwoorden": ["1945", "1918", "2025", "1914"],
+      "correct": "1914",
+      "image": null
+    }
   ],
   "3": [
-    {"vraag":"Welke planeet staat bekend als rode planeet?","antwoorden":["Mars","Venus","Aarde","Jupiter"],"correct":"Mars"},
-    {"vraag":"Hoeveel ogen heeft een spin?","antwoorden":["8","6","4","2"],"correct":"8"},
-    {"vraag":"Welke planeet staat bekend als 'blauwe planeet'?","antwoorden":["Aarde","Neptunus","Saturnus","Mercurius"],"correct":"Aarde"},
-    {"vraag":"Wat is de grootste planeet in ons zonnestelsel?","antwoorden":["Jupiter","Saturnus","Neptunus","Aarde"],"correct":"Jupiter"},
-    {"vraag":"Welke ster staat het dichtst bij de aarde?","antwoorden":["De zon","Sirius","Proxima Centauri","Polaris"],"correct":"De zon"},
-    {"vraag":"Welke stof ademen mensen in om te leven?","antwoorden":["Stikstof","Zuurstof","Koolstofdioxide","Helium"],"correct":"Zuurstof"},
-    {"vraag":"Welke planeet heeft ringen?","antwoorden":["Saturnus","Mars","Venus","Mercurius"],"correct":"Saturnus"},
-    {"vraag":"Wie vond de zwaartekrachtwet?","antwoorden":["Newton","Einstein","Galileo","Kepler"],"correct":"Newton"},
-    {"vraag":"Wat is het symbool van water in scheikunde?","antwoorden":["H2O","O2","CO2","NaCl"],"correct":"H2O"},
-    {"vraag":"Hoeveel planeten zijn er in ons zonnestelsel (vanaf 2006, na uitsluiting van Pluto)?","antwoorden":["9","8","10","7"],"correct":"8"}
+    {
+      "vraag": "Welke planeet staat bekend als rode planeet?",
+      "antwoorden": ["Mars", "Venus", "Aarde", "Jupiter"],
+      "correct": "Mars",
+      "image": null
+    },
+    {
+      "vraag": "Hoeveel ogen heeft een spin?",
+      "antwoorden": ["8", "6", "4", "2"],
+      "correct": "8",
+      "image": null
+    },
+    {
+      "vraag": "Welke planeet staat bekend als 'blauwe planeet'?",
+      "antwoorden": ["Aarde", "Neptunus", "Saturnus", "Mercurius"],
+      "correct": "Aarde",
+      "image": null
+    },
+    {
+      "vraag": "Wat is de grootste planeet in ons zonnestelsel?",
+      "antwoorden": ["Jupiter", "Saturnus", "Neptunus", "Aarde"],
+      "correct": "Jupiter",
+      "image": null
+    },
+    {
+      "vraag": "Welke ster staat het dichtst bij de aarde?",
+      "antwoorden": ["De zon", "Sirius", "Proxima Centauri", "Polaris"],
+      "correct": "De zon",
+      "image": null
+    },
+    {
+      "vraag": "Welke stof ademen mensen in om te leven?",
+      "antwoorden": ["Stikstof", "Zuurstof", "Koolstofdioxide", "Helium"],
+      "correct": "Zuurstof",
+      "image": null
+    },
+    {
+      "vraag": "Welke planeet heeft ringen?",
+      "antwoorden": ["Saturnus", "Mars", "Venus", "Mercurius"],
+      "correct": "Saturnus",
+      "image": null
+    },
+    {
+      "vraag": "Wie vond de zwaartekrachtwet?",
+      "antwoorden": ["Newton", "Einstein", "Galileo", "Kepler"],
+      "correct": "Newton",
+      "image": null
+    },
+    {
+      "vraag": "Wat is het symbool van water in scheikunde?",
+      "antwoorden": ["H2O", "O2", "CO2", "NaCl"],
+      "correct": "H2O",
+      "image": null
+    },
+    {
+      "vraag": "Hoeveel planeten zijn er in ons zonnestelsel (vanaf 2006, na uitsluiting van Pluto)?",
+      "antwoorden": ["9", "8", "10", "7"],
+      "correct": "8",
+      "image": null
+    }
   ]
 }
