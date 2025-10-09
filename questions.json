@@ -1,6 +1,6 @@
 {
   "1": [
-    {"vraag":"Hoeveel minuten duurt een officiële voetbalwedstrijd?","antwoorden":["60min","80min","90min","100min"],"correct":"90min"},
+    {"vraag":"Hoeveel minuten duurt een officiële voetbalwedstrijd?","antwoorden":["60min","80min","90min","100min"],"correct":"90min"},"image"{:"/images/"}
     {"vraag":"Welke kleur heeft de finishvlag in Formule 1?","antwoorden":["Blauw-wit","Zwart-wit","Rood-wit","Geel-wit"],"correct":"Zwart-wit"},
     {"vraag":"Hoeveel ringen staan er in het olympisch logo?","antwoorden":["5","7","4","6"],"correct":"5"},
     {"vraag":"Welke sport speel je met een bal en twee doelen?","antwoorden":["Voetbal","Hockey","Basketbal","Tennis"],"correct":"Voetbal"},
