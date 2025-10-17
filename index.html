@@ -15,7 +15,7 @@
         <form id="start-form">
             <label for="name">Wat is je naam?</label>
             <input type="text" id="name" name="name" placeholder="Vul je naam in" required>
-            <button type="submit">Ga verder</button>
+            <button type="submit">Start Quiz</button>
         </form>
     </div>
 
@@ -38,12 +38,16 @@
     <!-- =============================== QUIZPAGINA =============================== -->
     <div class="quiz-container container" id="quiz-page">
         <h2 id="vraag-tekst">Vraag</h2>
-        <div class="image-placeholder" id="vraag-afbeelding">
-            <p>[ Afbeelding ]</p>
+
+        <div class="quiz-image-timer">
+            <div class="image-placeholder" id="vraag-afbeelding">
+                <p>[ Afbeelding ]</p>
+            </div>
+            <div class="timer" id="timer">15s</div>
         </div>
+
         <div class="teamname" id="quiz-teamnaam">[Teamnaam]</div>
         <div class="answers" id="answers"></div>
-        <div class="timer" id="timer">Timer</div>
         <div class="feedback" id="feedback"></div>
     </div>
 

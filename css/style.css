@@ -97,14 +97,24 @@ button:hover {
 }
 
 /* =========================== QUIZ CONTAINER =========================== */
-.quiz-container .image-placeholder {
-    background: #ffffff; /* volledig wit */
+.quiz-image-timer {
+    display: flex;
+    justify-content: center;  /* afbeelding horizontaal centreren */
+    align-items: center;      /* verticale centrering */
+    position: relative;       /* voor absolute positionering timer */
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.image-placeholder {
+    width: 150px;
     height: 150px;
-    margin: 1rem 0;
+    background: #ffffff;
+    border-radius: 8px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 8px;
+    flex-shrink: 0;
 }
 
 .quiz-container .image-placeholder img {
@@ -134,19 +144,22 @@ button:hover {
     border-radius: 8px;
 }
 
-/* =========================== TIMER ALS ORANJE CIRKEL =========================== */
+/* =========================== TIMER ALS ORANJE CIRKEL RECHTS =========================== */
 .timer {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 80px;          /* breedte van de cirkel */
-    height: 80px;         /* hoogte van de cirkel */
-    background-color: #ff632a; /* oranje */
-    color: #ffffff;       /* witte tekst */
+    position: absolute;
+    right: 0;                  /* helemaal rechts in container */
+    top: 50%;                  /* verticaal midden */
+    transform: translateY(-50%);
+    width: 80px;
+    height: 80px;
+    background-color: #df5e13; /* oranje */
+    color: #ffffff;
     font-weight: bold;
     font-size: 1.2rem;
-    border-radius: 50%;   /* maakt het een cirkel */
-    margin: 1rem auto;    /* gecentreerd horizontaal */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
