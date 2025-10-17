@@ -70,25 +70,30 @@ button:hover {
 }
 
 .thema {
-    background: #fff;
-    color: #333;
-    padding: 2rem;
-    border-radius: 12px;
+    background: #5563DE; /* blauw */
+    color: #ffffff; /* witte tekst */
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /* cirkelvorm */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    min-width: 120px;
     transition: transform 0.3s ease, background 0.3s ease;
+    cursor: pointer;
 }
 
 .thema:hover {
     transform: translateY(-5px);
-    background: #f0f0f0;
+    background: #3f4cb8; /* donkerder blauw bij hover */
 }
 
 .thema a {
     text-decoration: none;
-    color: #333;
+    color: #fff;
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1rem;
+    text-align: center;
 }
 
 /* =========================== QUIZ CONTAINER =========================== */
