@@ -134,12 +134,20 @@ button:hover {
     border-radius: 8px;
 }
 
-/* =========================== TIMER =========================== */
+/* =========================== TIMER ALS ORANJE CIRKEL =========================== */
 .timer {
-    text-align: center;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;          /* breedte van de cirkel */
+    height: 80px;         /* hoogte van de cirkel */
+    background-color: #ff632a; /* oranje */
+    color: #ffffff;       /* witte tekst */
     font-weight: bold;
-    margin-top: 1rem;
     font-size: 1.2rem;
+    border-radius: 50%;   /* maakt het een cirkel */
+    margin: 1rem auto;    /* gecentreerd horizontaal */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
 /* =========================== FEEDBACK (goed/fout) =========================== */
